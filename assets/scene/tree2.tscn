@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dslh2ewhomyli"]
+
+[ext_resource type="Texture2D" uid="uid://drev7npwnqjq2" path="res://assets/img/b72f3f81-6724-4f91-a7ff-f7ccdc1b98d8_removalai_preview.png" id="1_ipocb"]
+
+[node name="tree2" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, -1.42808, 0)
+texture = ExtResource("1_ipocb")
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(-3.0598e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.0598e-08, 0, -1.42808, 0)
+texture = ExtResource("1_ipocb")

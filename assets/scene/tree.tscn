@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyi448a51oj8r"]
+
+[ext_resource type="Texture2D" uid="uid://b0egmds8nybfy" path="res://assets/img/Oak-tree-1-removebg-preview.png" id="1_rmfr0"]
+
+[node name="tree" type="Node3D"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_rmfr0")
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+texture = ExtResource("1_rmfr0")

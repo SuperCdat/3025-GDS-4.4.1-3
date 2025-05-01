@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://yel7wxk0cwds"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m2qxs"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ylsbe"]
+material = SubResource("StandardMaterial3D_m2qxs")
+size = Vector3(0.5, 0.5, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4udvn"]
+size = Vector3(0.5, 0.5, 1)
+
+[node name="Bullet" type="RigidBody3D"]
+mass = 0.3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_ylsbe")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_4udvn")

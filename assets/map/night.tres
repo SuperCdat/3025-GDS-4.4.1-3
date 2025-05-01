@@ -1,0 +1,17 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://cbckmcwwsk4bl"]
+
+[ext_resource type="Texture2D" uid="uid://bkggicivfes1v" path="res://assets/img/photo-1520034475321-cbe63696469a.jpg" id="1_4vr1u"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_hxrfk"]
+panorama = ExtResource("1_4vr1u")
+
+[sub_resource type="Sky" id="Sky_4vr1u"]
+sky_material = SubResource("PanoramaSkyMaterial_hxrfk")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_4vr1u")
+tonemap_mode = 2
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 0.15
