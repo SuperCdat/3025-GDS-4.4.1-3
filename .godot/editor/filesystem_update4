@@ -1,4 +1,6 @@
-res://assets/obj/wavinganim.res
-res://assets/obj/trytocatch.res
 res://assets/scene/world.tscn
 res://assets/map/night.tres
+res://assets/scene/character_body_3d.gd
+res://assets/scene/world.gd
+res://assets/scene/start.gd
+res://addons/virtual_joystick/virtual_joystick.gd

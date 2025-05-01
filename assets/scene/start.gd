@@ -21,4 +21,6 @@ func _on_button_pressed() -> void:
 	$Camera3D.current = false
 	$"../CharacterBody3D/SpringArm3D/Camera3D".current = true
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	if OS.get_name() == "Android" or OS.get_name() == "iOS":
+		$"../UI/Virtual Joystick".show()
 	queue_free()

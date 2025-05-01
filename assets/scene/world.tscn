@@ -17484,24 +17484,6 @@ transform = Transform3D(4.37114e-08, 1, -8.74228e-08, -4.37114e-08, 8.74228e-08,
 mesh = SubResource("PlaneMesh_xv8b0")
 surface_material_override/0 = SubResource("StandardMaterial3D_xv8b0")
 
-[node name="Control" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-grow_vertical = 0
-
-[node name="Virtual Joystick" type="Control" parent="Control"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-grow_vertical = 0
-scale = Vector2(0.205, 0.205)
-script = ExtResource("25_fob80")
-metadata/_custom_type_script = "uid://da0pedmsrbneu"
-
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
@@ -17558,6 +17540,36 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 23
 
+[node name="Button" type="Button" parent="UI"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -116.0
+offset_right = -38.0
+offset_bottom = -85.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Vào"
+
+[node name="Button2" type="Button" parent="UI"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -116.0
+offset_right = -38.0
+offset_bottom = -85.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Lấy"
+
 [node name="Control" type="Control" parent="UI"]
 visible = false
 layout_mode = 1
@@ -17592,35 +17604,20 @@ texture_normal = ExtResource("24_x27r2")
 action = "ui_accept"
 visibility_mode = 1
 
-[node name="Button" type="Button" parent="UI"]
+[node name="Virtual Joystick" type="Control" parent="UI"]
+visible = false
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
+anchors_preset = 2
 anchor_top = 1.0
-anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -84.0
-offset_top = -116.0
-offset_right = -38.0
-offset_bottom = -85.0
-grow_horizontal = 0
+offset_left = 25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = -25.0
 grow_vertical = 0
-text = "Vào"
-
-[node name="Button2" type="Button" parent="UI"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -84.0
-offset_top = -116.0
-offset_right = -38.0
-offset_bottom = -85.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "Lấy"
+scale = Vector2(0.25, 0.25)
+script = ExtResource("25_fob80")
+metadata/_custom_type_script = "uid://da0pedmsrbneu"
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.24391, -28.9268)

@@ -10,8 +10,6 @@ var should_look: bool = false
 
 func _ready() -> void:
 	animation_player.play("rigAction")
-	if OS.get_name() == "Android" or OS.get_name() == "iOS":
-		$Control.show()
 func _process(delta: float) -> void:
 	if should_look:
 		player_2.look_at(Vector3($CharacterBody3D.position.x, 0, $CharacterBody3D.position.z), Vector3.UP, true)
@@ -28,7 +26,7 @@ func _process(delta: float) -> void:
 		
 		if Input.is_action_just_pressed("e") && !GAME.is_tank_broked:
 			$UI/tip.hide()
-			$Control.hide()
+			$"UI/Virtual Joystick".hide()
 			$UI/Button.hide()
 			GAME.is_driving = true
 			$CharacterBody3D/SpringArm3D/Camera3D.current = false
@@ -67,7 +65,7 @@ func _on_area_3d_3_body_entered(body: Node3D) -> void:
 		$UI/VSlider.hide()
 		await get_tree().create_timer(4.0).timeout
 		if OS.get_name() == "Android" or OS.get_name() == "iOS":
-			$Control.show()
+			$"UI/Virtual Joystick".show()
 		$CharacterBody3D/SpringArm3D/Camera3D.current = true
 		$Tank/tank/headr/SpringArm3D/Camera3D.current = false
 		$UI/Control.hide()

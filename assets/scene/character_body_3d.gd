@@ -17,7 +17,7 @@ func takebazooka() -> void:
 
 func _input(event: InputEvent) -> void:
 	if !GAME.is_driving:
-		if event is InputEventMouseMotion && Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+		if (event is InputEventMouseMotion || event is InputEventScreenDrag) && Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 			$SpringArm3D.rotate_x((-event.relative.y) * mousesens)
 			rotate_y((-event.relative.x) * mousesens)
 			$SpringArm3D.rotation.x = clamp($SpringArm3D.rotation.x, deg_to_rad(-90.0), deg_to_rad(90.0))
